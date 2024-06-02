@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "bentopage_group",
+  "description": "bentopage by group mode",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
