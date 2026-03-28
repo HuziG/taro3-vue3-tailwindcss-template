@@ -1,8 +1,8 @@
 {
-  "name": "bentopage_group",
+  "name": "capBean",
   "version": "1.0.0",
   "private": true,
-  "description": "bentopage by group mode",
+  "description": "capBean",
   "templateInfo": {
     "name": "vue3-NutUI4",
     "typescript": true,
@@ -10,7 +10,9 @@
     "framework": "Vue3"
   },
   "scripts": {
-    "build:weapp": "taro build --type weapp",
+    "build:weapp:dev": "taro build --type weapp --mode dev",
+    "build:weapp:test": "taro build --type weapp --mode test",
+    "build:weapp:prd": "taro build --type weapp --mode prd",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
     "build:tt": "taro build --type tt",
@@ -19,7 +21,9 @@
     "build:qq": "taro build --type qq",
     "build:jd": "taro build --type jd",
     "build:quickapp": "taro build --type quickapp",
-    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:weapp": "npm run build:weapp:dev -- --watch",
+    "dev:weapp:test": "npm run build:weapp:test -- --watch",
+    "dev:weapp:prd": "npm run build:weapp:prd -- --watch",
     "dev:swan": "npm run build:swan -- --watch",
     "dev:alipay": "npm run build:alipay -- --watch",
     "dev:tt": "npm run build:tt -- --watch",

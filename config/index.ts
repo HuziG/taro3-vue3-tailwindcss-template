@@ -5,7 +5,7 @@ import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack'
 import path from 'path'
 
 const config = {
-  projectName: 'bentopage_group',
+  projectName: 'capBean',
   date: '2024-6-2',
   designWidth(input) {
     if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {

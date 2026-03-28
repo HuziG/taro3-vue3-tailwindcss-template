@@ -1,26 +1,94 @@
 <template>
-  <SafeArea class="flex flex-col items-center justify-center">
-    <view class="text-red-500"> 欢迎使用 NutUI 开发 Taro <Dongdong /> </view>
-    <view>{{ count }}</view>
-    <view>
-      <nut-button type="primary" @click="handleClick"> Count++ </nut-button>
-    </view>
+  <HomeHeader :capsuleTop="capsuleTop" :capsuleHeight="capsuleHeight" />
 
-    <view class="h-10"></view>
-
-    <view>Store Count: {{ countStore.count }}</view>
-
-    <view>
-      <nut-button @click="countStore.increment"> Count++ </nut-button>
-    </view>
-  </SafeArea>
+  <view class="p-4">
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+    <view class="text-2xl font-bold">hello</view>
+  </view> 
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { Dongdong } from '@nutui/icons-vue-taro'
-import { SafeArea } from '@/components/SafeArea/index'
+import { ref, computed } from 'vue'
 import { useCounterStore } from '@/store'
+import { HomeHeader } from '@/components'
+import useCapsule from '@/hooks/useCapsule'
+
+const { capsuleInfo } = useCapsule()
+const capsuleTop = computed(() => capsuleInfo.value.top)
+const capsuleHeight = computed(() => capsuleInfo.value.height)
 
 const count = ref(0)
 

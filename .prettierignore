@@ -1,0 +1,20 @@
+# 忽略构建输出目录
+dist/
+.temp/
+.rn_temp/
+
+# 忽略依赖目录
+node_modules/
+
+# 忽略配置文件
+*.config.js
+!tailwind.config.js
+
+# 忽略特定文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.DS_Store
+.gitignore
+.eslintignore
+.prettierignore

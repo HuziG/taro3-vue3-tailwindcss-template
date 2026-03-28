@@ -1,0 +1,155 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./icon.scss";
+
+@layer components {
+  .btn-active {
+    transition-property: all;
+    transition-duration: 150ms;
+  }
+  .btn-active:active {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+}
+
+.avatar-button::after {
+  border: none;
+}
+
+page {
+  background-color: #fafafa;
+}
+
+:root,
+body {
+  --nut-elevator-list-item-name-height: 140rpx !important;
+  --nut-primary-color: #45ACB6;
+  --nut-menu-bar-box-shadow: none !important;
+  --nut-menu-item-content-max-height: 750px;
+}
+
+.button-reset {
+  &::after {
+    border: none !important;
+  }
+
+  outline: none;
+
+  margin: 0px !important;
+}
+
+button {
+  &::after {
+    border: none;
+  }
+}
+
+.cover-image image {
+  height: 100% !important;
+}
+
+// 缺豆
+.able-to-play {
+  .palette-color-number-text {
+    color: #ef4444;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.flex-col-c {
+  @apply flex flex-col items-center justify-center;
+}
+
+.reset-button-avatar {
+  background-color: transparent;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::after {
+    border: none;
+  }
+}
+
+// form-wrapper
+.border-form-wrapper {
+  @apply border-4 p-4 border-b-8 border-gray-800 overflow-hidden rounded-lg;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+// fadeIn 动画
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-spin {
+  animation: spin-with-pause 1.4s steps(8, end) infinite;
+}
+
+@keyframes spin-with-pause {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(45deg);
+  }
+  20% {
+    transform: rotate(90deg);
+  }
+  30% {
+    transform: rotate(135deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(225deg);
+  }
+  60% {
+    transform: rotate(270deg);
+  }
+  70% {
+    transform: rotate(315deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}

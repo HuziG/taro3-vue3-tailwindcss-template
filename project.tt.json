@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "bentopage_group",
-  "description": "bentopage by group mode",
-  "appid": "touristappid",
+  "projectname": "capBean",
+  "description": "capBean",
+  "appid": "wxcbd26343a98a35ab",
   "setting": {
     "urlCheck": true,
     "es6": false,

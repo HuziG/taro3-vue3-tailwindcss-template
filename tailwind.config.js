@@ -9,4 +9,27 @@ module.exports = {
     // 小程序不需要 preflight，因为这主要是给 h5 的，如果你要同时开发多端，你应该使用 process.env.TARO_ENV 环境变量来控制它
     preflight: false,
   },
+  theme: {
+    extend: {
+      keyframes: {
+        slideDown: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 0.3s ease-out',
+      },
+      colors: {
+        // 主色系：青绿色系列
+        primary: '#44ABB6',
+      },
+    },
+  },
 }
